@@ -3,6 +3,7 @@
     --white-color:#fff;
     --black-color:#000;
     --text-color: #333;
+    --boder-color: #dbdbdb;
 }
 
 *{
@@ -60,12 +61,56 @@ html{
 }
 
 .modal__body{
-    width: 300px;
-    height: 300px;
-    background-color: white;;
+    width: 500px;
+    height: 430px;
+    
     margin: auto;
     position: relative;
     z-index:  1;
-    border-radius: 5px;
 }
+
+/* BUTTON STYLE */
+.btn{
+    min-width: 142px;
+    height: 34px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding : 0 12px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: #333;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+
+}
+
+.btn.btn--nomal:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+.btn.btn--size-s{
+    height: 32px;
+    font-size: 12px ;
+    padding : 0 8px;
+
+}
+
+.btn.btn--primary { 
+    color : white;
+    background-color : #EE4D2D;
+
+}
+
+.btn.btn--disabled {
+    color: #949494;
+    cursor: default;
+    background-color : #c3c3c3;
+}
+
+
