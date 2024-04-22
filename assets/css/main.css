@@ -101,6 +101,7 @@
     border-radius:2px;
     display: none;
     animation: fadeIn ease-in .3s;
+    z-index: 3;
 }
 
 .header__qr::before{
@@ -112,16 +113,19 @@
     content: "";
     display: block;
     
+    
 
 }
 
 .header__qr-img{
     width : 100%;
+    
 }
 
 .header__qr-apps{
     display: flex;
     justify-content: space-between;
+    
     
 }
 
@@ -394,10 +398,10 @@
 }
 
 .header-with-search{
-    height: var(--header-width-search-height);
+    height: 30px;
     display: flex;
     align-items: center;
-    margin-top: 10px ;
+    margin-top: 20px ;
     margin-left: 8px;
     
 
@@ -426,12 +430,62 @@
 .header__cart{
     width: 150px;
     text-align: center;
+    position: relative;
+    cursor: pointer;
+    
 }
+
+.hearder__cart-wrap{
+    position: relative;
+}
+
+.header__cart:hover .header__cart-list{
+    display: block;
+}
+
 
 .header__cart-icon{
     color: white;
     font-size: 2.4rem;
-    margin-top: 10px;
+    margin-top: 18px;
+}
+
+.header__cart-list{
+    position: absolute;
+    top: 100%;
+    right: 40px;
+    width: 300px;
+    height: 150px;
+    margin-top:8px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 1px 3.125rem rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.header__cart-list::after{
+    content: "";
+    position: absolute;
+    right: 5px;
+    margin-top:5px;
+    top: -30px;
+    border-width: 20px 26px;
+    border-style:  solid;
+    border-color: transparent transparent white transparent;
+}
+
+.header__cart-list--no-cart{
+    padding: 29px 0px;
+}
+
+.header__cart-no-cart-img{
+    width: 60%;
+}
+
+.header__cart-list-no-cart-msg{
+    display:block;
+    font-size: 1.4rem;
+    color: #0a0a0a;
 }
 
 .header__search-input-wrap{
@@ -449,7 +503,7 @@
     padding: 0 16px;
     color: #333;
     border-radius:2px;
-   z-index: 0;
+    z-index: 0;
 }
 
 .header__search-select{
@@ -600,6 +654,7 @@
 .header__search-history-item{
     height: 38px;
     padding: 0 12px;
+   
 }
 
 .header__search-history-item:hover{
@@ -611,5 +666,8 @@
     font-size: 1.4rem;
     color: #333;
     line-height: 38px;
+    display: block;
+
 }
+
 
