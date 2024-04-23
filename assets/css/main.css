@@ -37,7 +37,7 @@
 .header__navbar-item,
 .header__navbar-item-link{
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
    /* color: var(--white-color);*/
     color : white;
     text-decoration: none;
@@ -461,9 +461,11 @@
     border-radius: 2px;
     box-shadow: 0 1px 3.125rem rgba(0, 0, 0, 0.2);
     display: none;
+    cursor: default;
 }
 
-.header__cart-list::after{
+.header__cart-list::after{ /* lớp giả */
+    cursor: pointer;
     content: "";
     position: absolute;
     right: 5px;
@@ -477,15 +479,39 @@
 .header__cart-list--no-cart{
     padding: 29px 0px;
 }
+.header__cart-list--no-cart .header__cart-no-cart-img,
+.header__cart-list--no-cart .header__cart-list-no-cart-msg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .header__cart-no-cart-img{
     width: 60%;
+    display: none; /* ẩn trường hợp giỏ hàng trống */
 }
 
 .header__cart-list-no-cart-msg{
-    display:block;
+    display: none; /* ẩn trường hợp giỏ hàng trống */
+    /* display:block; */
     font-size: 1.4rem;
     color: #0a0a0a;
+}
+
+.header__cart-notice{
+    position: absolute;
+    top: -4px;
+    right: 42px;
+    padding: 3px 7px;
+    font-size: 1.2rem;
+    line-height: 1rem;
+    color: #EE4D2D;
+    background-color:white;
+    border-radius: 15px ;
+    border: 4px solid #EE4D2D;
+    margin-top: 8px;
+    
+    
 }
 
 .header__search-input-wrap{
@@ -668,6 +694,30 @@
     line-height: 38px;
     display: block;
 
+}
+
+.header__list-hint{
+    margin-top: 13px;
+    font-size: 1.3rem;
+    
+}
+.header__hint-search {
+   line-height: 1.2rem;
+   flex-wrap: wrap;
+    
+}
+
+.list-hint{
+    color: #ffffff;
+    font-weight: 500;
+    margin-right: 20px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    line-height: 1.1rem;
+}
+
+.list-hint:first-child{
+    margin-left: 235px;
 }
 
 
